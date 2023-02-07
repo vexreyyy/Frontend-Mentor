@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+/* Global Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Color Variables */
+
+:root{
+    --Dark-cyan: hsl(180, 45%, 34%);
+    --Cream: hsl(30, 28%, 92%);
+    --Very-dark-blue: hsl(212, 31%, 14%);
+    --Dark-grayish-blue: hsl(228, 22%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/* Main section css */
+main{
+    background-color: var(--White);
+    display: flex;
+    max-width: 830px;
+    border-radius: 20px;
+
+}
+main .right{
+    padding: 45px;
+}
+
+main img{
+    border-radius: 20px 0 0 20px;
+
+}
+/* Left section css*/
+.left{
+    width: 50%;
+    background-image: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+    border-radius: 20px 0 0 20px;
+}
+/* Right section css*/
+
+.right,
+.left {
+    width: 50%;
+}
+.right h1{
+    font-family: 'Fraunces', serif;
+    font-size: 350%;
+    margin: 20px auto;
+}
+.right-tag{
+    letter-spacing: 5px;
+    color: var(--Dark-cyan);
+}
+.right-desc{
+    font-size: 140%;
+    color: var(--Dark-grayish-blue);
+    line-height: 30px;
+    
+}
+.right span{
+    display: block;
+}
+
+/* Price section */
+
+.right .price{
+    display: flex;
+    margin: 5px auto;
+    color: var(--Dark-cyan);
+}
+
+.right .price h1{
+    margin: 20px 0;
+}
+.right .price del{
+    margin: 40px auto;
+    font-size: 130%;
+    color: var(--Dark-grayish-blue);
+}
+/* Button section */
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    color: white;
+    width: 320px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--Dark-cyan);
+    font-weight: bold;
+    cursor: pointer;
+}
+button img{
+    width: 20px;
+    margin-right: 10px;
+}
+button:hover{
+    background-color: var(--Very-dark-blue);
+}
+
+/* 375px */
+
+@media only screen and (max-width: 375px) {
+
+    main{
+        display: block;
+        max-width: 350px;
+        max-height: 750px;
+    }
+    main .right{
+        padding: 25px;
+    }
+    
+    main img{
+        border-radius: 20px 20px 0 0;
+    
+    }
+    .right h1{
+        font-size: 240%;
+    }
+    .right-desc{
+        font-size: 130%;
+    }
+    .right,
+    .left {
+    width: 100%;
+    }
+    .left{
+        background-image: url(./images/image-product-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 250px;
+        border-radius: 20px 20px 0 0;
+    }
+    .right .price del{
+        margin: 32px auto;
+        font-size: 110%;
+        color: var(--Dark-grayish-blue);
+        margin-left: 20px;
+    }
+    button{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+    }
+
+
+
+}
+
+
+
+
+
+
+
